@@ -1,8 +1,8 @@
 # React App - Pokedex tracker
 
-Small react app implmenting login, registering, authentication and data storing (CRUD) via Firebase; I primarily created this app to practice using Tailwind css with React components.
+Small react app implementing login, registering, authentication and data storing (CRUD) via Firebase; I primarily created this app to practice using Tailwind css with React components.
 
-Users can search for cards and sets, then add/delete them to/from favourites. Also created pagination for cards and sets pages
+Users can search for cards and sets, then add/delete them to/from favourites. I also created pagination for cards and sets pages, and add navigation to result pages
 
 <br/>
 <br/>
