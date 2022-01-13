@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* avoid repeating same styling for text elements used many times */
+@layer base {
+  h1 {
+    @apply text-3xl sm:text-4xl font-extralight; 
+  }
+
+  h2 {
+    @apply text-lg sm:text-xl font-normal;
+  }
+
+  h3 {
+    @apply text-sm sm:text-base font-light;
+  }
+
+  h4 {
+    
+  }
+
+  h5 {
+    
+  }
+
+  h6 {
+    
+  }
+
+  h1,h2,h4,h5,h6 {
+    @apply text-center;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  transition: all 0.25s;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+
+.App {
+  overflow-y: scroll;
+}
+
+/* below are the properties not supported in tailwind yet*/
+.result {
+  perspective: 1000px;
+}
+
+.result:hover .result__front {
+  transform: rotateY(180deg);
+}
+
+.result:hover .result__back {
+  transform: rotateY(360deg);
+}
+
+.result__inner {
+  transform-style: preserve-3d;
+}
+
+.result__front, .result__back {
+  -webkit-backface-visibility: hidden; /* Safari compatibility*/
+  backface-visibility: hidden;
+}
+
+.result__back {
+  transform: rotateY(180deg);
 }
